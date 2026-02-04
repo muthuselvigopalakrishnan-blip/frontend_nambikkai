@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #5b7c99;
+  --dark-bg: #2d3e50;
+  --light-text: #ffffff;
+  --light-bg: #f8f8f8;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background: rgba(0, 0, 0, 0.4); /* ✅ transparent */
+  color: white;
+  padding: 12px 50px; /* ✅ slim height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* ✅ glass effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: white;
+}
+.nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.nav a:hover {
+  color: var(--primary-color);
+}
+body {
+  background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+/* Styles moved to navbar.css */
+/* Form Container */
+.container {
+  background-color: var(--light-bg);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 100px;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 0.9em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(91, 124, 153, 0.5);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #34495e;
+}
+
+.switch {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.switch a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}

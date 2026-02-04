@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book an Appointment for NGO</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/book-ngo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">NAMBIKKAI</div>
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="./ngo-list.html">NGO's</a>
+            <a href="#">Lawyer</a>
+            <a href="./about.html">About Us</a>
+            <a href="./login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Book an Appointment</h1>
+        <p>Schedule a meeting with our team to discuss volunteering, donations, or community support.</p>
+    </section>
+
+    <section class="appointment-form">
+        <h2>Appointment Form</h2>
+        <form id="appointmentForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Purpose of Meeting</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+
+            <button type="submit" class="button">Submit Appointment</button>
+            <div class="btn-container">
+                <a href="/index.html" class="main-btn">⬅ Back</a>
+            </div>
+        </form>
+    </section>
+
+    <!-- Popup -->
+    <div class="popup" id="popupMessage">
+        <h3>✅ Appointment Submitted Successfully</h3>
+        <p>Thank you for booking an appointment.<br><br>
+            You will receive an email shortly with all your appointment details and confirmation 💌</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo-section">
+                <div class="footer-logo">
+                    <h4><i class="fas fa-heart"></i> End Honour Killings</h4>
+                </div>
+                <p>Working towards a world where everyone has the freedom to live with dignity and make their own
+                    choices.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div>
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">About the Issue</a></li>
+                        <li><a href="#">Take Action</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Get Help</h5>
+                    <ul>
+                        <li><a href="#">Emergency Helplines</a></li>
+                        <li><a href="#">Legal Resources</a></li>
+                        <li><a href="#">Support Groups</a></li>
+                        <li><a href="#">Safe Houses</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 End Honour Killings Initiative. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Contact</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

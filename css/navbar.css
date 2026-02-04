@@ -1,0 +1,60 @@
+/* Basic reset for header elements to ensure consistency */
+/* .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #808080; /* Solid gray background as per user image */
+    /* color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #dfdfdf;
+} */
+
+/* Ensure body starts after fixed header */
+/* body {
+    padding-top: 70px; 
+    margin: 0;
+}
+
+/* Responsive */
+/* @media (max-width: 800px) {
+    .header {
+        padding: 0 20px;
+    }
+    .nav a {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+} */ 

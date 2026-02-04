@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Nambikkai</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/user-dashboard.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <div class="logo">NAMBIKKAI</div>
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="../pages/ngo-list.html">NGO's</a>
+            <a href="../pages/lawyer.html">Lawyer</a>
+            <a href="../pages/user-dashboard.html">Booking page</a>
+            <a href="../pages/bookappointment.html">Book Appointment</a>
+            <a href="../pages/login.html" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- WELCOME SECTION -->
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h2>Welcome, <span id="username">User</span>!</h2>
+                <p>Here you can manage your upcoming appointments and history.</p>
+            </div>
+            <a href="../pages/bookappointment.html" class="book-btn">+ Book New Appointment</a>
+        </div>
+
+        <!-- APPOINTMENTS SECTION -->
+        <section class="appointments-section">
+            <div class="section-header">
+                <h3><i class="fas fa-calendar-check"></i> Your Appointments</h3>
+            </div>
+
+            <div class="table-responsive">
+                <table class="appointments-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>NGO's / Lawyer</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointment-list">
+                        <!-- Sample Data 1 -->
+                        <tr>
+                            <td>Feb 10, 2026</td>
+                            <td><span class="badge badge-ngo">NGO</span></td>
+                            <td>Aasara foundation</td>
+                            <td>Volunteering discussion</td>
+                            <td><span class="status-confirmed">Confirmed</span></td>
+                        </tr>
+                        <!-- Sample Data 2 -->
+                        <tr>
+                            <td>Feb 15, 2026</td>
+                            <td><span class="badge badge-lawyer">LAWYER</span></td>
+                            <td>Rebecca john</td>
+                            <td>Personal Meeting</td>
+                            <td><span class="status-pending">Pending</span></td>
+                        </tr>
+                        <!-- Sample Data 3 -->
+                        <tr>
+                            <td>Mar 01, 2026</td>
+                            <td><span class="badge badge-ngo">NGO</span></td>
+                            <td>DHRDNet</td>
+                            <td>Meeting</td>
+                            <td><span class="status-confirmed">Confirmed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="no-appointments" style="display:none; text-align:center; padding: 20px; color:#777;">
+                <p>You have no upcoming appointments.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Simple logout function
+        function logout() {
+            // clear any session storage if implemented later
+            // alert('Logged out successfully');
+        }
+
+        // Simulating fetching user data
+        document.addEventListener('DOMContentLoaded', function () {
+            // You could fetch data from localStorage or an API here
+            // const user = localStorage.getItem('user');
+            // if(user) document.getElementById('username').innerText = user;
+        });
+    </script>
+
+</body>
+
+</html>

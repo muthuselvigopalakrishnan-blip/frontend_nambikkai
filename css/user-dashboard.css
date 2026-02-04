@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #5b7c99;
+    --dark-bg: #2d3e50;
+    --light-text: #ffffff;
+    --light-bg: #f8f8f8;
+    --text-color: #333;
+    --success-color: #27ae60;
+    --pending-color: #f39c12;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* HEADER / NAVBAR */
+.header {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 12px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* DASHBOARD CONTAINER */
+.dashboard-container {
+    max-width: 1000px;
+    margin: 100px auto 50px;
+    /* Top margin accounts for fixed header */
+    padding: 20px;
+}
+
+.welcome-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-text h2 {
+    color: var(--dark-bg);
+    margin-bottom: 5px;
+}
+
+.welcome-text p {
+    color: #666;
+}
+
+.book-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #486a85;
+}
+
+/* APPOINTMENTS SECTION */
+.appointments-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.section-header h3 {
+    color: var(--dark-bg);
+}
+
+/* TABLE STYLES */
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.appointments-table th,
+.appointments-table td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.appointments-table th {
+    background-color: #f9f9f9;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.appointments-table tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* BADGES */
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-ngo {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge-lawyer {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.status-confirmed {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.status-pending {
+    color: var(--pending-color);
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .appointments-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .header {
+        padding: 10px 20px;
+        flex-direction: column;
+        position: relative;
+        background: var(--dark-bg);
+    }
+
+    .nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 5px 10px;
+    }
+
+    .dashboard-container {
+        margin-top: 20px;
+    }
+}
